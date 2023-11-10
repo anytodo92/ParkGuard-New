@@ -2,6 +2,7 @@
 import Banner from "../Common/Banner";
 import CardIntro from "../Common/CardIntro";
 import Contact from "../Common/Contact";
+import FullImage from "../Common/FullImage";
 import {
   Images, Icons,
 } from "../../utils/assets";
@@ -11,34 +12,77 @@ import {
 
 const Home = (): JSX.Element => {
   const bannerData = {
-    title: "Park-Busse erhalten?",
+    title: "<p><strong>Die vollumfängliche Lösung zur Parkplatzbewirtschaftung</strong></p>",
     description: `
-      Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
+      <p>Wir decken alle Prozesse der modernen Parkplatzbewirtschaftung durch unsere digitalen Tools ab. </p>
+      <p><br/></p>
+      <p>Unsere Gesamtlösung besteht aus <strong>ParkGuard</strong>, dem Tool zur Ausstellung von Umtriebsenschädigungen und <strong>ParkGO</strong>, dem Tool zur Erteilung von Parkbewilligungen.</p>
     `,
     intro1: {
-      title: "Wir kümmern uns um Falschparker",
       description: `
-        Die komplette digitale Lösung - kostenlos!
-        <br />
-        Zusammenarbeit starten ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corporis autem tempora perspiciatis expedita quibusdam!
+        Mit ParkGuard befreist du deine Liegenschaften von Falschparkern. Via App werden Verstösse erfasst und die Umtriebsentschädiung kann mit wenigen Klicks beglichen werden. 
       `,
-      buttonText: "Zusammenarbeit",
-      buttonUrl: "/kontakt",
+      buttonText: "Mehr erfahren",
+      buttonUrl: "/#park-guard",
     },
 
     intro2: {
-      title: "Wie funktioniert’s?",
       description: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corpo
+        Mit ParkGO können deine Mieter und Eigentümmer auf einfachste Art und Weise Besucher erfassen und Parkbewilligungen ausstellen. Von wenigen Minuten bis zu permanenten Bewilligungen.
       `,
-      buttonText: "Unsere Lösung",      
-      buttonUrl: "/unsere-losung",
+      buttonText: "Mehr erfahren",      
+      buttonUrl: "/#park-go",
     }
 
   };
+
+  const introData1 = {
+    title: "Was ist ParkGuard?",
+    description: `
+    Durch ParkGO schaffen wir Klarheit. Berechtigte Fahrzeuge sind in unserem Backoffice erfasst und es besteht keine Gefahr, dass irrtümlich Vorderungen in Form eine Umtriebsentschädigung auf der Windschutzscheibe deiner Besucher.innen landen.
+    `,
+    items: [
+      {
+        title: "Welche Probleme werden<br/>mit ParkGuard gelöst?",
+        description: `
+        Unsere Bewilligungsplattform vereinfacht dir das Erfassen von berechtigten Fahrzeugen auf deinen Besucher- und Mieterparkplätzen. Wir schaffen Klarheit über berechtigte- und nichtberechtigte Fahrzeuge. 
+        `
+      },
+      {
+        title: "Wie funktioniert<br />ParkGuard?",
+        description: `
+        Auf unserer digitalen ParkGo Plattform, erfasst du deine Besucher und erteilst ihnen somit temporäre- und permanente Parkbewilligungen. Die Bewilligung ist mit wenigen Klicks erteilt. Wir benötigen lediglich das Kennzeichen und die Dauer der auszustellenden Berechtigung.
+        `
+      }
+    ]
+  }
+  const introData2 = {
+    title: "Was ist ParkGO?",
+    description: `
+    Durch ParkGO schaffen wir Klarheit. Berechtigte Fahrzeuge sind in unserem Backoffice erfasst und es besteht keine Gefahr, dass irrtümlich Vorderungen in Form eine Umtriebsentschädigung auf der Windschutzscheibe deiner Besucher.innen landen.
+    `,
+    items: [
+      {
+        title: "Welche Probleme werden<br/>mit ParkGuard gelöst?",
+        description: `
+        Unsere Bewilligungsplattform vereinfacht dir das Erfassen von berechtigten Fahrzeugen auf deinen Besucher- und Mieterparkplätzen. Wir schaffen Klarheit über berechtigte- und nichtberechtigte Fahrzeuge. 
+        `
+      },
+      {
+        title: "Wie funktioniert<br />ParkGuard?",
+        description: `
+        Auf unserer digitalen ParkGo Plattform, erfasst du deine Besucher und erteilst ihnen somit temporäre- und permanente Parkbewilligungen. Die Bewilligung ist mit wenigen Klicks erteilt. Wir benötigen lediglich das Kennzeichen und die Dauer der auszustellenden Berechtigung.
+        `
+      }
+    ]
+  }
   return (
     <HomeWrapper>
       <Banner data={bannerData} />
+      <FullImage />
+      <CardIntro data={introData1} />
+      <CardIntro data={introData2} />
+      <Contact />
     </HomeWrapper>
   );
 };

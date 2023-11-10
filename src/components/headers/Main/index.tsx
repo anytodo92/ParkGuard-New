@@ -55,16 +55,13 @@ const MainHeader: React.FC = () => {
       <div className="content">        
         <div className="logo">
           <a href="/">
-            <img src={Images.LogoUrl} width="96" height="95" alt="" />
+            <img src={Images.LogoUrl} width="64" height="63" alt="" />
           </a>
           <div
             className="toggle-btn"
             onClick={toggleMenu}
           >
-            {toggleStatus
-              ? <img src={Icons.MenuBlackUrl} />
-              : <img src={Icons.MenuWhiteUrl} />
-            }
+            <img src={Icons.MenuBlackUrl} />
           </div>
         </div>
         <div className="control">

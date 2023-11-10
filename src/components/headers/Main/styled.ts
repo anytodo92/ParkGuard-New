@@ -48,9 +48,9 @@ export const MainHeaderWrapper = styled.nav`
 
     .control {      
       .menu {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 18px;
-        line-height: 24px;
+        line-height: 1.5;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -77,12 +77,12 @@ export const MainHeaderWrapper = styled.nav`
               display: inline-flex;
               justify-content: center;
               align-items: center;
-              border: 1.5px solid ${props => props.theme.colors.white};
+              border: 1.5px solid ${props => props.theme.colors.black};
               border-radius: 36px;
-              color: ${props => props.theme.colors.white};
+              color: ${props => props.theme.colors.black};
               font-weight: 400;
               font-size: 18px;
-              line-height: 22px;
+              line-height: 1.5;
               cursor: pointer;
             }
           }
@@ -176,11 +176,11 @@ export const MainHeaderWrapper = styled.nav`
             }
             
             > a {
-              color: ${props => props.theme.colors.white}
+              color: ${props => props.theme.colors.black}
             }
 
             &.active > a {
-              color: ${props => props.theme.colors.white};
+              color: ${props => props.theme.colors.black};
             }
           }
         }
@@ -195,7 +195,7 @@ export const MainHeaderWrapper = styled.nav`
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.desktop_ml}) {
+  @media (min-width: 1500px) {
     .content {
       width: ${props => props.theme.maxWidth}px;
       margin: 0 auto;

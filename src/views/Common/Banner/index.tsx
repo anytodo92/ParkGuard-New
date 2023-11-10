@@ -27,13 +27,7 @@ const Banner = ({ data }: BannerPropsType): JSX.Element => {
     }*/
   return (
     <BannerWrapper className="banner">
-      <div className="bg">
-        <div className="lt"></div>
-        <div className="rt"></div>
-      </div>
-
       <div className="content">
-        
         <div className="summary">
           <h2 dangerouslySetInnerHTML={{ __html: data.title }}></h2>
           {data.description&&
@@ -45,7 +39,7 @@ const Banner = ({ data }: BannerPropsType): JSX.Element => {
           {(data.intro1 && data.intro2)&&
             <>
               <div className="card1">
-                <h2>{data.intro1.title}</h2>
+                <div><img src={Images.LogoParkGuardUrl} /></div>
                 {data.intro1.description&&
                   <p dangerouslySetInnerHTML={{ __html: data.intro1.description }}>
                   </p>
@@ -57,7 +51,7 @@ const Banner = ({ data }: BannerPropsType): JSX.Element => {
                 }
               </div>
               <div className="card2">
-                <h2>{data.intro2.title}</h2>
+                <div><img src={Images.LogoParkGoUrl} /></div>
                 {data.intro2.description&&
                   <p dangerouslySetInnerHTML={{ __html: data.intro2.description }}>
                   </p>
