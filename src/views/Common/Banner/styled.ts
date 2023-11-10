@@ -4,6 +4,7 @@ import { Images } from "../../../utils/assets";
 export const BannerWrapper = styled.section`
   position: relative;
   height: auto;
+  padding-bottom: 50px;
   .bg {
     position: absolute;
     height: 100%;
@@ -33,114 +34,29 @@ export const BannerWrapper = styled.section`
     display: flex;
     flex-direction: column;
     
-    .qa {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 20px;
-      color: ${props => props.theme.colors.white};
-      width: 100%;
-      left: 50%;
-      top: 38%;
-      transform: translate(-50%, -50%);
-      > h2 {
-        font-weight: 700;
-        font-size: 35px;
-        color: ${props => props.theme.colors.white};
-      }
-      > p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-      }
-
-      .icon {
-        margin-top: 10px;
-      }
-    }
     .summary {
-      width: 100%;
-      
-      margin-top: 200px;
-      padding-bottom: 390px;
+      margin-top: 150px;
+      padding-bottom: 240px;
       h2 {
         font-weight: 700;
         font-size: 36px;
         line-height: 40px;
-        color: ${props => props.theme.colors.white};
+        color: ${props => props.theme.colors.black};
       }
       .desc {
         margin-top: 30px;
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
-        color: ${props => props.theme.colors.white};
+        color: ${props => props.theme.colors.black};
       }
-      .form {
-        margin-top: 30px;
-        .wrapper {
-          display: flex;
-          align-items: center;
-          column-gap: 10px;
-        }
-
-        button, input {
-          
-          outline: 0;
-          border: 0;
-          height: 45px;
-          border-radius: 45px;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 22px;
-        }
-
-        input {
-          flex: 1;
-          color: ${props => props.theme.colors.white};
-          display: flex;
-          align-items: center;
-          padding-left: 20px;
-         
-          &::placeholder {
-            color: ${props => props.theme.colors.white};
-            opacity: 1;
-          }
-
-          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: ${props => props.theme.colors.white};
-          }
-
-          &::-ms-input-placeholder { /* Microsoft Edge */
-            color: ${props => props.theme.colors.white};
-          }
-        }
-        button {
-          flex: 0.7;
-          width: 130px;
-          min-width: 100px;
-          background-color: ${props => props.theme.colors.white};
-          color: ${props => props.theme.colors.black};
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-        }
-      }
+      
     }
 
     .cards {
-      flex: 1;
+      
       position: relative;
-      padding-bottom: 70px;
-      h2 {
-        font-weight: 700;
-        font-size: 30px;
-        line-height: 30px;
-        color: ${props => props.theme.colors.black};
-      }
+     
       p {
         font-weight: 400;
         font-size: 16px;
@@ -148,177 +64,98 @@ export const BannerWrapper = styled.section`
         color: ${props => props.theme.colors.black};
         margin-top: 30px;
       }
-      a {
-        height: 42px;
-        border: 1.5px solid ${props => props.theme.colors.black};
-        border-radius: 42px;
-        padding: 0 20px;
-        display: inline-flex;
-        align-items: center;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 22px;
-        color: ${props => props.theme.colors.black};
-        margin-top: 30px;
-        cursor: pointer;
-        background-color: transparent;
-        text-decoration: none;
+
+      .func {
+        display: flex;
+        justify-content: center;
+        a {
+          height: 42px;
+          border: 1.5px solid ${props => props.theme.colors.black};
+          border-radius: 42px;
+          padding: 0 36px;
+          display: inline-flex;
+          align-items: center;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
+          color: ${props => props.theme.colors.black};
+          margin-top: 30px;
+          cursor: pointer;
+          background-color: transparent;
+          text-decoration: none;
+        }
       }
 
       .card1 {
-        
         padding: 40px 20px;
-        background: linear-gradient(180.39deg, #FFFFFF 27.72%, #ACCBEE 99.66%);
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
-        border-radius: 30px;
-        
         margin-top: -150px;
-
-        
+        border-radius: 30px;
+        background: linear-gradient(180deg, #FFF 27.72%, #D7D7D7 99.66%);
+        box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
       }
 
-      .card2 {
-        
+      .card2 {        
         padding: 40px 20px;
-        background: linear-gradient(178.74deg, #FFFFFF 6.9%, #BED7F2 140.8%);
-        box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
-        border-radius: 30px;
         margin-top: 25px;
-        
+        border-radius: 30px;
+        background: linear-gradient(178deg, #FFF 9.79%, #D7D7D7 188.73%);
+        box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
       }
     }
   }
 
   @media(min-width: ${props => props.theme.breakpoints.desktop}) {
-    height: 100vh;
     overflow: hidden;
-  
-    .bg {
-      position: absolute;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      left: 0;
-      top: 0;
-      width: 100%;
-
-      .lt {
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100% 100%;
-        height: 100%;
-        width: 50%;
-
-      }
-
-      .shape-bot {
-        display: none;
-      }
-    }
+    height: 540px;
+    padding-bottom: 0;
     .content {
       flex-direction: row;
       height: 100%;
 
-      .qa {
-        position: absolute;
-        bottom: 100px;
-        left: 8%;
-        top: unset;
-        width: auto;
-        transform: unset;
-
-        > h2 {
-          font-size: 45px;
-        }
-        > p {
-          font-size: 18px;
-          line-height: 22px;
-        }
-      }
-
       .summary {
-        width: 35%;
-        margin-top: -100px;
-        align-self: center;
-        margin-left: 50px;
+        width: 40%;
+        margin-top: 200px;
+        margin-left: 0;
         padding-bottom: 0;
 
         h2 {
-          font-size: 45px;
-          line-height: 45px;
+          font-size: 30px;
+          line-height: 1.13;
+          max-width: 540px;
         }
 
         .desc {
           font-size: 18px;
-          line-height: 22px;
-        }
-        .form {
-          input, button {
-            flex: unset;
-            font-size: 20px;
-            line-height: 24px;
-          }
-          input {
-            width: 315px;
-            padding-left: 30px;
-          }
+          line-height: 1.2;
+          max-width: 490px;
         }
       }
 
       .cards {
+        width: 60%;
         padding-bottom: 0;
        
         .card1 {
           position: absolute;
-          bottom: -30px;
-          right: 10%;
+          left: 40px;
+          bottom: -365px;
           transform: rotate(-6.76deg);
-          padding: 40px 20px 300px;
-          width: 434px;
+          padding: 40px 20px 70px;
+          width: 55%;
+          max-width: 440px;
+          height: 700px;
           margin-top: 0;
         }
         .card2 {
           position: absolute;
-          bottom: -50px;
+          bottom: -40px;
           right: 0;
           transform: rotate(6.76deg);
           padding: 40px 20px 70px;
-          width: 280px;
+          width: 45%;
+          max-width: 380px;
+          height: 370px;
           margin-top: 0;
-        }
-      }
-    }
-  }
-
-  @media(min-width: 1200px) {
-    .content {
-      .qa {
-        left: 10%;
-      }
-      .summary {        
-        margin-left: 100px;
-      }
-    }
-  }
-
-  @media(min-width: ${props => props.theme.breakpoints.desktop_lg}) {
-    .content {
-      .cards {
-        h2 {
-          font-size: 40px;
-          line-height: 40px;
-        }
-
-        p {
-          font-size: 18px;
-          line-height: 22px;
-        }
-        .card1 {
-          width: 534px;
-        }
-        .card2 {
-          width: 380px;
         }
       }
     }
@@ -328,6 +165,20 @@ export const BannerWrapper = styled.section`
     .content {
       width: ${props => props.theme.maxWidth}px;
       margin: 0 auto;
+
+      .cards {
+        p {
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        .card1 {
+          left: -30px;
+        }
+        .card2 {
+          right: 80px;
+        }
+      }
     }
   }
 

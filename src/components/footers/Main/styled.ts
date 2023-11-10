@@ -10,37 +10,10 @@ export const FooterWrapper = styled.footer`
     margin: 0 ${props => props.theme.margins.primary}px;
   }
 
-  .card {
-    display: none;
-    position: absolute;
-    bottom: -70px;
-    right: 100px;
-    padding: 40px 20px 130px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transform: rotate(6.76deg);
-    width: 360px;
-
-    > h2 {
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 40px;
-      color: ${props => props.theme.colors.white};
-    }
-    > p {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 22px;
-      color: ${props => props.theme.colors.white};
-      margin-top: 30px;
-    }
-  }
-
   > section {
     &:nth-child(1) {
       padding: 30px 0 40px;
-      background-color: #003664;
+      background-color: ${props => props.theme.colors.black};
 
       .content {
         display: grid;
@@ -51,13 +24,13 @@ export const FooterWrapper = styled.footer`
           > h2 {
             font-weight: 500;
             font-size: 22px;
-            line-height: 33px;
+            line-height: 1.5;
             color: ${props => props.theme.colors.white};
           }
           > p {
             font-weight: 400;
             font-size: 16px;
-            line-height: 24px;
+            line-height: 1.5;
             color: ${props => props.theme.colors.white};
             &:nth-child(2) {
               margin-top: 17px;
@@ -72,14 +45,14 @@ export const FooterWrapper = styled.footer`
     }
 
     &:nth-child(2) {
-      background-color: #0E4E84;
+      background-color: ${props => props.theme.colors.black_third};
       
       .content {
         display: flex;
         padding: 20px 0;
         font-size: 16px;
         font-weight: 400;
-        line-height: 28px;
+        line-height: 1.5;
         color: ${props => props.theme.colors.white};
       }
     }
@@ -93,9 +66,6 @@ export const FooterWrapper = styled.footer`
     padding-top: 120px;
     margin-top: -120px;
   
-    .card {
-      display: block;
-    }
     > section {
       &:nth-child(1) {
         padding: 20px 0;
@@ -111,7 +81,7 @@ export const FooterWrapper = styled.footer`
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.desktop_ml}) {
+  @media (min-width: 1500px) {
     .content {
       margin: 0 auto;
       width: ${props => props.theme.maxWidth}px;

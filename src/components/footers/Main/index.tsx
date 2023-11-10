@@ -14,11 +14,11 @@ const Footer = (): JSX.Element => {
         <div className="content">
           <div className="col">
             <h2>Adresse</h2>
-            <p>ParkGuard<br />Leimatt B<br />6317 Zug</p>
+            <p>ParkX AG<br />Leimatt B<br />6317 Zug</p>
           </div>
           <div className="col">
             <h2>Kontakt</h2>
-            <p>T +41 58 123 45 67<br />kontakt@parkguard.ch</p>
+            <p>T +41 58 123 45 67<br />info@pakrx.swiss</p>
           </div>
           <div className="col">
             <h2>Rechtliches</h2>
@@ -30,18 +30,9 @@ const Footer = (): JSX.Element => {
       </section>
       <section>
         <div className="content">
-          <div className="txt">&copy;Copyright 2022 - ParkX AG</div>          
+          <div className="txt">&copy;Copyright 2023 - ParkX AG</div>          
         </div>
       </section>
-      <div className="content">
-        <div className="card">
-          <h2>Interessiert?</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum
-          </p>
-          <Link to="/kontakt">Kontaktieren</Link>
-        </div>
-      </div>
     </FooterWrapper>
   );
 };
