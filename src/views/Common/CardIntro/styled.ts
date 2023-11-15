@@ -11,22 +11,24 @@ export const CardIntroWrapper = styled.section`
     column-gap: 50px;
   }
 
-  h2 {
-    position: relative;
-    color: ${props => props.theme.colors.black};
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 1.5;
+  .main {
+    h2 {
+      position: relative;
+      color: ${props => props.theme.colors.black};
+      font-size: 45px;
+      font-weight: 700;
+      line-height: 1.5;
 
-    &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      content: "";
-      display: inline-block;
-      width: 69px;
-      height: 4px;
-      background-color: ${props => props.theme.colors.black};
+      &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        display: inline-block;
+        width: 69px;
+        height: 4px;
+        background-color: ${props => props.theme.colors.black};
+      }
     }
   }
 
@@ -70,7 +72,12 @@ export const CardIntroWrapper = styled.section`
       flex-direction: row;
     }
 
+    .main {
+      width: 35%;
+    }
+
     .cards {
+      width: 65%;
       margin-top: 0;
     }
   }
