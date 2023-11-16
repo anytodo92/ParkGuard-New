@@ -92,6 +92,10 @@ export const BannerWrapper = styled.section`
         border-radius: 30px;
         background: linear-gradient(180deg, #FFF 27.72%, #D7D7D7 99.66%);
         box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
+
+        img {
+          width: 215px;
+        }
       }
 
       .card2 {        
@@ -100,6 +104,10 @@ export const BannerWrapper = styled.section`
         border-radius: 30px;
         background: linear-gradient(178deg, #FFF 9.79%, #D7D7D7 188.73%);
         box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
+
+        img {
+          width: 165px;
+        }
       }
     }
   }
